@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AAD.ClientId": "your-aad-client-id",
+    "AAD.Secret": "the-secret-value-for-the-client",
+    "AAD.Tenant": "your-aad-tenant-id",
+    "Azure.SubscriptionId": "your-subscription-id"
+  }
+}

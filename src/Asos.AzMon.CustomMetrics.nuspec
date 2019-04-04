@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Asos.AzMon.CustomMetrics</id>
+    <version>0.1.0</version>
+    <authors>ASOS</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Asos.AzMon.CustomMetrics</description>
+	  <tags>Asos.AzMon.CustomMetrics</tags>
+    </metadata>
+	<files>
+        <file src="src\**\bin\Release\**" target="" />
+		</files>
+</package>
