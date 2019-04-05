@@ -43,10 +43,7 @@ namespace Asos.AzMon.CustomMetrics.Functions
         {
             return Task.Run(async () =>
             {
-                var resourceId = serviceBusNamespace.Id;
-                var regionName = serviceBusNamespace.Region.Name;
-
-                _logger.LogInformation($"Processing namespace {serviceBusNamespace.Name} in region {regionName}");
+                _logger.LogInformation($"Processing namespace {serviceBusNamespace.Name} in region {serviceBusNamespace.Region.Name}");
 
                 var payload = new MetricPayload {Time = DateTime.UtcNow};
                 var metricData = payload.Data.MetricData;
@@ -61,7 +58,7 @@ namespace Asos.AzMon.CustomMetrics.Functions
 
                 if (metricData.Series.Count > 0)
                 {
-                    await _metricsClient.CreateMetric(regionName, resourceId, payload);
+                    await _metricsClient.CreateMetric(serviceBusNamespace.Region.Name, serviceBusNamespace.Id, payload);
                 }
             });
         }
